@@ -1,12 +1,14 @@
 # pmOS
 
-**A modular artifact system that turns AI coding assistants into product development partners.**
+**A modular artifact-building system that turns AI coding assistants into product development partners.**
 
-Best for **building features on existing products** — problem framing, alignment, and specs that plug into your current strategy and users. Most AI coding setups excel at vibe coding 0-to-1; pmOS is built for the other 90%: shipping the next feature on something that already exists.
+This is for **building features on existing products** — problem framing, alignment, and specs that plug into your current strategy and users. It is not for vibe coding 0-to-1 or greenfield ideas; most AI coding setups already excel there. pmOS is for the other 90%: shipping the next feature on something that already exists.
 
 Five structured workflows for creating product artifacts — briefs, PRDs, prototypes, GTM 1-pagers, and external docs — with AI-simulated stakeholder reviews built in.
 
 Works with [Cursor](https://cursor.com/) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+
+By [Mike Lyngaas](https://mikelyngaas.github.io/index.html)
 
 ---
 
@@ -28,7 +30,7 @@ For more context — how it works, demo, project structure — read on below.
 
 ### Without pmOS
 
-- You ask the AI to write a PRD and get a generic template filled with vague language
+- You ask the AI to write a PRD and get a generic template filled with vague language — the AI effectively does the product thinking for you
 - No structured review — the AI agrees with everything you wrote
 - Each artifact starts from scratch with no shared context
 - You spend more time wrestling the output into shape than thinking about the product
@@ -36,7 +38,7 @@ For more context — how it works, demo, project structure — read on below.
 
 ### With pmOS
 
-- You fill in a short PM POV (your point of view, in your words — no shortcuts here) and dump raw evidence into a feature context file
+- Core product thinking stays with you: you fill in the PM POV (your point of view, in your words — no shortcuts) and raw evidence; the AI synthesizes and drafts from that, it doesn't replace your judgment
 - The AI synthesizes your inputs against company strategy before writing anything
 - Structured, phased workflows with AI-simulated stakeholder reviews (CEO/Founder, Tech Lead, Design Lead, QA, GTM, and more)
 - Every piece of feedback is tagged P0/P1/P2 so you know what to address
@@ -149,7 +151,7 @@ Personas are AI-simulated stakeholders used during the Review phase of each work
 
 ---
 
-## Start here — detail
+## Working with the repo
 
 Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on pmOS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type **`@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
 

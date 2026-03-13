@@ -19,6 +19,8 @@ Requires at least one of:
 Also read:
 - **`System/company-context.md`** — for product context and mental model
 
+**Optional (for a more true-to-form prototype):** Prompt the PM to provide design system or reference artifacts — e.g. design tokens (colors, typography, spacing), brand guidelines, screenshots of existing product UI, or component patterns. If they upload or link these (in the feature folder or in chat), use them when generating the prototype so it better matches their product. If they don't have any, proceed with the default design language below.
+
 If neither a Product Brief nor a PRD exists for this feature, tell the user and offer to create one first.
 
 **Company context check:** At the start of the workflow, read `System/company-context.md`. If it is effectively empty (only placeholders), tell the user: "Company context isn't set; product context for the prototype will be generic. Set it up now, or proceed anyway?" Let the user choose before continuing.
@@ -65,7 +67,7 @@ Read the source artifact and identify which workflows to prototype. Ask the user
 
 - "Which workflows from the brief/PRD are most important to visualize?"
 - "Are there specific screens or states you want to see?"
-- "Is there an existing product UI style I should reference?" (If the user has an existing app, ask for screenshots or descriptions of the current UI to match visual conventions.)
+- "Do you have a design system or reference artifacts to make the prototype true to form?" Prompt for design tokens (colors, typography, spacing), brand guidelines, screenshots of existing product UI, or component patterns. If they provide any — via upload to the feature folder or in chat — use them when generating the prototype; otherwise use the default design language below.
 
 **Default scope:** If the user doesn't have a strong opinion, prototype the key workflows defined in the source artifact (Section 4.2 of the brief or PRD). Typically 3-6 screens covering the primary happy path.
 
