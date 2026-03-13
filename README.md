@@ -132,6 +132,23 @@ pmOS:  Brief exists — abbreviating Phase 1, starting with detailed requirement
 
 ---
 
+## Personas
+
+Personas are AI-simulated stakeholders used during the Review phase of each workflow. They give you structured feedback from different roles so you can pressure-test artifacts without scheduling meetings. Each persona focuses on a different slice of the artifact (strategy, engineering, UX, compliance, etc.); feedback is tagged P0/P1/P2 so you know what to fix first. Add, remove, or edit personas in `System/Personas/` to match your team.
+
+| Persona | Description |
+|----------|--------------|
+| **CEO/Founder** | Strategic lens: right investment at the right time, ROI, opportunity cost, scope prioritization. |
+| **Tech Lead** | Engineering reality check: feasibility, architecture, dependencies, risk, build-vs-buy. |
+| **Design Lead** | User's advocate: intuitive workflows, cognitive load, edge-case UX, simplification. |
+| **QA Lead** | Failure-case thinker: acceptance criteria, edge cases, testability, release readiness. |
+| **GTM Lead** | Market-facing strategist: positioning, adoption, packaging/pricing, launch and enablement. |
+| **Support Lead** | Customer confusion anticipator: error messaging, documentation, post-launch monitoring. |
+| **Legal Lead** | Risk and compliance guardrail: regulatory, contractual, data privacy, disclosures. |
+| **Data Science Lead** | Measurement reality check: instrumentable goals, event design, metrics, guardrails. |
+
+---
+
 ## Start here — detail
 
 Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on pmOS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type **`@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
