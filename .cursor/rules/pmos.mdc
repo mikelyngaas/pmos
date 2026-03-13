@@ -1,0 +1,40 @@
+---
+description: pmOS — routes the agent to the right workflow for PRDs, product briefs, prototypes, GTM 1-pagers, and external docs
+alwaysApply: true
+---
+
+# pmOS — Product Artifact System
+
+When the user asks to create, draft, or work on any product artifact — PRD, product brief, prototype, GTM 1-pager, or external docs — follow the system in `System/`.
+
+## Start Here
+
+Read `System/artifact-hub.md` to determine which artifact the user needs, then follow the corresponding workflow in `System/Workflows/`.
+
+## Key Files
+
+- `System/artifact-hub.md` — Central registry. Maps each artifact to its workflow, template, inputs, and persona assignments. **Read this first.**
+- `System/company-context.md` — Stable strategic context. Read at the start of any new artifact.
+- `System/Templates/pm-pov-template.md` — Template for the PM to outline their fundamental point of view on the problem, context, and solution. **Do not edit directly** — copy to `Features/[feature-name]/pm-pov.md`.
+- `System/Templates/feature-context-template.md` — Template for per-feature raw evidence. **Do not edit directly** — copy to `Features/[feature-name]/feature-context.md`.
+- `System/Personas/` — Persona files. Read the relevant personas for each artifact type (see hub for assignments).
+- `System/Workflows/` — One workflow file per artifact type.
+- `System/Templates/` — One template file per artifact type (except prototype, which outputs HTML).
+
+## Per-Feature Setup
+
+When starting work on any feature:
+
+1. Create `Features/[feature-name]/` with fresh copies of the PM POV and feature context templates.
+2. Fill in the copies — never the templates.
+3. Choose which artifact to produce (see artifact hub for routing).
+4. Follow the corresponding workflow.
+
+## Behavior
+
+- Read the artifact hub to understand routing and persona assignments.
+- Always read the three shared inputs before starting: `company-context.md`, the PM POV, and the feature context.
+- The PM POV is the primary framing. Sharpen it when conviction is high; challenge it when conviction is low.
+- Ask before moving between phases. The user controls the pace.
+- When personas conflict, surface the tension and let the user decide. Log the decision.
+- Be direct and concise. No filler. The user is a PM — speak at that level.

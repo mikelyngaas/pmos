@@ -1,0 +1,85 @@
+---
+description: Kick off a new feature — creates the feature folder, copies templates, walks the PM through the PM POV and feature context, and asks which artifact to produce first
+alwaysApply: false
+---
+
+# @new-feature — Start a New Feature
+
+Invoke in Cursor by typing **@new-feature** in chat. When the user wants to start working on a new feature, run this sequence. Your job is to handle all the setup so the PM can focus on thinking, not file management.
+
+## Step 1: Get the Feature Name
+
+Ask the user for a short, kebab-case feature name (e.g., `sequence-templates`, `smart-notifications`). If they give you a natural-language name, suggest a kebab-case version and confirm.
+
+## Step 2: Scaffold the Feature Folder
+
+1. Create `Features/[feature-name]/`
+2. Copy `System/Templates/pm-pov-template.md` → `Features/[feature-name]/pm-pov.md`
+3. Copy `System/Templates/feature-context-template.md` → `Features/[feature-name]/feature-context.md`
+4. Confirm to the user: folder created, both files ready.
+
+**Never edit the templates in `System/`.** Always copy.
+
+## Step 3: Load Strategic Context & Company Context Check
+
+Read `System/company-context.md`. If it is effectively empty (only placeholders, no real vision/goals/strategy), tell the user: **"Company context isn't set; alignment and persona feedback will be generic. Set it up now, or proceed anyway?"** Let the user choose. You'll need company context for the entire workflow — don't summarize it back to the user unless they ask.
+
+## Step 4: Fill in the PM POV (Conversational)
+
+Read `System/Templates/pm-pov-template.md` so you have the full template and its supporting comments. Walk the user through the 6 PM POV prompts, one at a time. For each:
+- **Include the gist of the template's supporting comment** when you ask the question — the subtext (e.g. "Not the polished version; the 'here's what I keep hearing and seeing' version" or "Two kinds: nuance from being close to the product, and organizational baggage") is helpful and the user should see it.
+- Ask in a natural, conversational way; don't just paste the template prompt verbatim, but do surface the intent from the comment.
+- Let the user talk — short or long answers are both fine
+- Ask one follow-up if their answer is vague or missing something important
+- Write their answer into `Features/[feature-name]/pm-pov.md` as you go
+
+The 6 prompts (in order):
+1. What's the problem in your own words?
+2. Why does this problem matter?
+3. What's your hypothesis on the right solution direction?
+4. What context won't show up in the data? (nuance + organizational baggage)
+5. What are you most worried about?
+6. What's your conviction level?
+
+**Conviction level is critical.** It calibrates how the AI behaves for the rest of the workflow. Make sure you get a clear answer — a number or a qualitative read (e.g., "pretty high, maybe 80%" or "honestly, I'm not sure this is the right bet").
+
+## Step 5: Fill in the Feature Context
+
+Ask the user what raw evidence they have. Go section by section:
+1. Voice of Customer
+2. Voice of Sales & GTM
+3. Voice of Support
+4. Strategic Connection
+5. Other Inputs
+
+For each: ask if they have anything. If yes, let them paste or describe it. If no, note it as a gap — it's fine, not every section needs to be full. Write answers into `Features/[feature-name]/feature-context.md`.
+
+**Keep this fast.** The feature context is a dump, not a polished doc. Don't over-interview — if the user says "I'll add more later," move on.
+
+## Step 6: Choose an Artifact
+
+Once both input files are filled in, ask the user which artifact to produce first. Read `System/artifact-hub.md` for the full menu. Present the options concisely:
+
+- **Product Brief** — Align the team on problem, goals, and solution direction before going deep on requirements. Best starting point for most features.
+- **Full PRD** — Jump straight to detailed requirements. Best when alignment already exists.
+- **Prototype** — Visualize key workflows. Requires a Product Brief or PRD first.
+- **GTM 1-Pager** — Sales/CS primer. Requires a Product Brief or PRD first.
+- **External Docs** — User-facing documentation. Requires a PRD first.
+
+If the user isn't sure, recommend starting with a Product Brief — it's the natural first step and feeds into everything else.
+
+## Step 7: Ready Check
+
+Tell the user:
+- Brief summary of what you captured (3-4 bullets max)
+- Any notable gaps in context
+- Which artifact you're starting and what to expect
+
+When the user confirms, hand off to the corresponding workflow in `System/Workflows/`. The artifact system rule takes over from here.
+
+## Behavior
+
+- Be conversational, not robotic. You're a thinking partner, not a form.
+- One question at a time. Don't dump all 6 PM POV questions at once.
+- If the user already has a PM POV or feature context written, skip the interview — just read what they have and go to the artifact selection.
+- If the user provides a feature name that already exists in `Features/`, warn them and ask if they want to continue with the existing files or start fresh.
