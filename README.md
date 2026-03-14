@@ -1,8 +1,8 @@
-# pmOS
+# Product Dev OS
 
 **A modular artifact-building system that turns AI coding assistants into product development partners.**
 
-This is for **building features on existing products** — problem framing, alignment, and specs that plug into your current strategy and users. It is not for vibe coding 0-to-1 or greenfield ideas; most AI coding setups already excel there. pmOS is for the other 90%: shipping the next feature on something that already exists.
+This is for **building features on existing products** — problem framing, alignment, and specs that plug into your current strategy and users. It is not for vibe coding 0-to-1 or greenfield ideas; most AI coding setups already excel there. Product Dev OS is for the other 90%: shipping the next feature on something that already exists.
 
 Five structured workflows for creating product artifacts — briefs, PRDs, prototypes, GTM 1-pagers, and external docs — with AI-simulated stakeholder reviews built in.
 
@@ -28,7 +28,7 @@ For more context — how it works, demo, project structure — read on below.
 
 ---
 
-### Without pmOS
+### Without Product Dev OS
 
 - You ask the AI to write a PRD and get a generic template filled with vague language — the AI effectively does the product thinking for you
 - No structured review — the AI agrees with everything you wrote
@@ -36,7 +36,7 @@ For more context — how it works, demo, project structure — read on below.
 - You spend more time wrestling the output into shape than thinking about the product
 - The AI doesn't know your company strategy, your conviction level, or what you're worried about
 
-### With pmOS
+### With Product Dev OS
 
 - Core product thinking stays with you: you fill in the PM POV (your point of view, in your words — no shortcuts) and raw evidence; the AI synthesizes and drafts from that, it doesn't replace your judgment
 - The AI synthesizes your inputs against company strategy before writing anything
@@ -65,21 +65,21 @@ Artifacts are modular. You can create a prototype as soon as the brief is done; 
 
 ```
 You:   I want to start a new feature. (or @new-feature)
-pmOS:  What should we call it? Short name, e.g. smart-notifications or sequence-templates.
+Product Dev OS:  What should we call it? Short name, e.g. smart-notifications or sequence-templates.
 You:   template-gallery
-pmOS:  Set up Features/template-gallery/. Let's fill in the PM POV. What's the problem in your own words?
+Product Dev OS:  Set up Features/template-gallery/. Let's fill in the PM POV. What's the problem in your own words?
 You:   Users build outbound sequences from scratch every time — 30+ min, same patterns. New reps don't know what a good sequence looks like.
-pmOS:  What's your hypothesis on the right solution direction?
+Product Dev OS:  What's your hypothesis on the right solution direction?
 You:   Curated templates: gallery of proven sequences they can browse, preview, deploy. V1 read-only; V2 adds AI customization.
 ...
 You:   Conviction around 80-85%.
-pmOS:  High conviction — I'll sharpen. [Synthesis:] Problem = slow, inconsistent quality. Signal = top accounts asked. Tension = V1 read-only vs support tickets wanting customization. Strategic fit = Q1 "Make Unify Self-Serve." Match?
+Product Dev OS:  High conviction — I'll sharpen. [Synthesis:] Problem = slow, inconsistent quality. Signal = top accounts asked. Tension = V1 read-only vs support tickets wanting customization. Strategic fit = Q1 "Make Unify Self-Serve." Match?
 You:   Yes. Staying firm on read-only for V1.
-pmOS:  Noted. [Drafts sections 1-3.] Ready for CEO/Founder review?
+Product Dev OS:  Noted. [Drafts sections 1-3.] Ready for CEO/Founder review?
 You:   Go.
-pmOS:  **CEO/Founder:** P0 — "Why now" is weak; quantify churn/onboarding cost. P1 — Size the investment (2 weeks vs quarter?). P2 — Templates as wedge into marketing ops?
+Product Dev OS:  **CEO/Founder:** P0 — "Why now" is weak; quantify churn/onboarding cost. P1 — Size the investment (2 weeks vs quarter?). P2 — Templates as wedge into marketing ops?
 You:   Addressing P0, then moving on. Now do the full PRD.
-pmOS:  Brief exists — abbreviating Phase 1, starting with detailed requirements. Ready for Phase 2?
+Product Dev OS:  Brief exists — abbreviating Phase 1, starting with detailed requirements. Ready for Phase 2?
 ```
 
 ---
@@ -153,7 +153,7 @@ Personas are AI-simulated stakeholders used during the Review phase of each work
 
 ## Working with the repo
 
-Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on pmOS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type **`@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
+Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on Product Dev OS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type **`@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
 
 ---
 
