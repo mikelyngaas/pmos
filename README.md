@@ -199,7 +199,7 @@ Product Dev OS:  Brief exists — abbreviating Phase 1, starting with detailed r
 
 ## Working with the repo
 
-Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on Product Dev OS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type `**@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
+Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on Product Dev OS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type **`@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
 
 ---
 
