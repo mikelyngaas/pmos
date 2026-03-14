@@ -67,8 +67,8 @@ For more context — how it works, demo, project structure — read on below.
 
 ---
 
-## Artifacts
-
+## Artifacts you can create (I'll keep adding here)
+Artifacts are modular: you can create a prototype, brief, or PRD in whatever order you like. Produce what the feature and its stage require.
 
 | Artifact                  | What it does                                                  | When to use it                                                                      |
 | ------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -79,7 +79,7 @@ For more context — how it works, demo, project structure — read on below.
 | **External Docs**         | Customer-facing documentation draft                           | Near or post-launch                                                                 |
 
 
-Artifacts are modular. You can create a prototype as soon as the brief is done; you don't need to finish the PRD first. Not every feature needs every artifact. Produce what the feature and its stage require.
+
 
 ---
 
