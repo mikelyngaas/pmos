@@ -2,7 +2,7 @@
 
 **A modular artifact-building system that turns AI coding assistants into top 1% product development partners.**
 
-This is for **building features on existing products**, not for vibe coding 0-to-1 or greenfield ideas; most AI coding tools already excel there. Product Dev OS is for the 95% of us shipping features on a foundation of existing product, company, and user context. It pressure tests your core product thinking, channels opinionated stakeholders, and builds high quality breifs and prototypes insanely fast
+This is for **building features on existing products**, not for vibe coding 0-to-1 or greenfield ideas; most AI coding tools already excel there. Product Dev OS is for the 95% of us shipping features on a foundation of existing product, company, and user context. It pressure tests your core product thinking, channels opinionated stakeholders, and **builds high quality briefs and prototypes insanely fast.**
 
 There are 4 phases:
 
