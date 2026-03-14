@@ -7,11 +7,19 @@ alwaysApply: false
 
 Invoke in Cursor by typing **@new-feature** in chat. When the user wants to start working on a new feature, run this sequence. Your job is to handle all the setup so the PM can focus on thinking, not file management.
 
-## Step 1: Get the Feature Name
+## Step 1: Company Context First
+
+Read `System/company-context.md`. If it is effectively empty (only placeholders, no real vision/goals/strategy), tell the user:
+
+**"Before we start a feature, fill in `System/company-context.md` with your vision, goals, and principles. Do this once — you'll reuse it for every feature. Tell me when it's done and we'll continue."**
+
+Wait for the user to confirm. When they say they're done (or if the file already has real content), proceed to Step 2. Don't summarize company context back to the user unless they ask.
+
+## Step 2: Get the Feature Name
 
 Ask the user for a short, kebab-case feature name (e.g., `sequence-templates`, `smart-notifications`). If they give you a natural-language name, suggest a kebab-case version and confirm.
 
-## Step 2: Scaffold the Feature Folder
+## Step 3: Scaffold the Feature Folder
 
 1. Create `Features/[feature-name]/`
 2. Copy `System/Templates/pm-pov-template.md` → `Features/[feature-name]/pm-pov.md`
@@ -19,10 +27,6 @@ Ask the user for a short, kebab-case feature name (e.g., `sequence-templates`, `
 4. Confirm to the user: folder created, both files ready.
 
 **Never edit the templates in `System/`.** Always copy.
-
-## Step 3: Load Strategic Context & Company Context Check
-
-Read `System/company-context.md`. If it is effectively empty (only placeholders, no real vision/goals/strategy), tell the user: **"Company context isn't set; alignment and persona feedback will be generic. Set it up now, or proceed anyway?"** Let the user choose. You'll need company context for the entire workflow — don't summarize it back to the user unless they ask.
 
 ## Step 4: Fill in the PM POV (Conversational)
 
@@ -81,5 +85,6 @@ When the user confirms, hand off to the corresponding workflow in `System/Workfl
 
 - Be conversational, not robotic. You're a thinking partner, not a form.
 - One question at a time. Don't dump all 6 PM POV questions at once.
+- Read `System/company-context.md` when you need it for alignment during PM POV and artifact work — don't summarize it unless the user asks.
 - If the user already has a PM POV or feature context written, skip the interview — just read what they have and go to the artifact selection.
 - If the user provides a feature name that already exists in `Features/`, warn them and ask if they want to continue with the existing files or start fresh.

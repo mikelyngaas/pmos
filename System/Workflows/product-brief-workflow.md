@@ -35,7 +35,7 @@ The AI runs this workflow for you; you answer questions and approve steps. Outpu
 
 1. **Draft** — Section 4.1 (Proposed Approach), 4.2 (Key Workflows), 4.3 (High-Level Scope in/out), 4.4 (Open Questions & Risks). Ask: simplest version, 2–3 user workflows, what’s deliberately out of V1.
 2. **Design Lead + Tech Lead review** — Design: workflows make sense, UX/scope risks. Tech: feasibility, architecture/dependencies, need for spikes. Present feedback labeled, P0/P1/P2. Write review to `Features/[feature-name]/brief-review.md`. **At the top**, include a **Key Tensions to Resolve** table with columns: **Tension** (rich description), **Priority** (P0/P1/P2), **Source** (persona name), **PM Decision** (blank for PM to fill). Full persona feedback with P0/P1/P2 tags follows below.
-3. **Revise & finalize** — Update section 4; finalize Executive Summary, open-question owners, Next Steps. Before calling the brief done, verify it meets the **Product Brief** quality bar in `System/quality-bars-draft.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. **Exit:** PM confirms brief ready for stakeholders.
+3. **Revise & finalize** — Update section 4; finalize Executive Summary, open-question owners, Next Steps. Before calling the brief done, verify it meets the **Product Brief** quality bar in `System/quality-bars.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. **Exit:** PM confirms brief ready for stakeholders.
 
 ---
 

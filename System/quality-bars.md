@@ -75,4 +75,3 @@ External docs are **ready for Eng/Support review** when:
 | 2 | Audience is clear | The doc states who it's for (e.g. end users, admins) and is written at the right level. |
 | 3 | Key workflows are documented | All workflows that the PRD defines as in-scope for users are covered (getting started, main flows, and reference where needed). |
 | 4 | Accuracy check | Where implementation exists, terminology and behavior match the product (or discrepancies are flagged for the review team). |
-

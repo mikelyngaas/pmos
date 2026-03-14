@@ -72,7 +72,7 @@ Present feedback from both personas with P0/P1/P2 priority tags.
 
 ## Step 3 — Revise & Finalize
 
-Incorporate feedback and finalize. Before calling the 1-pager done, verify it meets the **GTM 1-Pager** quality bar in `System/quality-bars-draft.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. The 1-pager should be:
+Incorporate feedback and finalize. Before calling the 1-pager done, verify it meets the **GTM 1-Pager** quality bar in `System/quality-bars.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. The 1-pager should be:
 - **Skimmable** — a busy sales rep should get the gist in 60 seconds
 - **Concrete** — use cases are scenarios, not abstractions
 - **Actionable** — talking points are ready to use in a customer conversation

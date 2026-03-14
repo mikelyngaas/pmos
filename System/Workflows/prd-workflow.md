@@ -243,7 +243,7 @@ The AI does a final pass across the entire PRD:
 
 ### Step 4.2 — Final Review
 
-Before presenting, verify the PRD meets the **Full PRD** quality bar in `System/quality-bars-draft.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. Then present the complete PRD to the user for a final read-through, calling out:
+Before presenting, verify the PRD meets the **Full PRD** quality bar in `System/quality-bars.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. Then present the complete PRD to the user for a final read-through, calling out:
 - Any sections that are thin or incomplete
 - Open questions that still need resolution
 - Assumptions that carry high risk if wrong

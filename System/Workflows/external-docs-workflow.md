@@ -84,7 +84,7 @@ Present feedback with P0/P1/P2 priority tags.
 
 ### Step 4 — Revise & Finalize
 
-Incorporate feedback. Before marking the doc ready, verify it meets the **External Product Docs** quality bar in `System/quality-bars-draft.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. The final documentation should be:
+Incorporate feedback. Before marking the doc ready, verify it meets the **External Product Docs** quality bar in `System/quality-bars.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. The final documentation should be:
 - **Accurate** — matches the actual product behavior
 - **Complete** — covers getting started, key workflows, and reference
 - **Scannable** — users should find what they need quickly (headers, numbered steps, tables)

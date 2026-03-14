@@ -72,7 +72,7 @@ Persona files live in `Personas/`. Read the relevant personas before running a r
 
 ## Quality Bars
 
-Before finalizing any artifact, the AI should verify it meets the **quality bar** for that artifact type. The full definitions live in **`System/quality-bars-draft.md`** (Product Brief, Full PRD, Interactive Prototype, GTM 1-Pager, External Docs). Use them in coherence checks and final-review steps so the PM and AI align on "ready." If the bar isn't met, list the gaps and ask the PM: address before finalizing, or explicitly accept and proceed? The PM can override and move forward.
+Before finalizing any artifact, the AI should verify it meets the **quality bar** for that artifact type. The full definitions live in **`System/quality-bars.md`** (Product Brief, Full PRD, Interactive Prototype, GTM 1-Pager, External Docs). Use them in coherence checks and final-review steps so the PM and AI align on "ready." If the bar isn't met, list the gaps and ask the PM: address before finalizing, or explicitly accept and proceed? The PM can override and move forward.
 
 ---
 

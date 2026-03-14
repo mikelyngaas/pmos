@@ -1,10 +1,13 @@
-# pmOS
+# Product Dev OS
 
-**A modular artifact-building system that turns AI coding assistants into product development partners.**
+**A modular artifact-building system that turns AI coding assistants into top 1% product development partners.**
 
-This is for **building features on existing products** — problem framing, alignment, and specs that plug into your current strategy and users. It is not for vibe coding 0-to-1 or greenfield ideas; most AI coding setups already excel there. pmOS is for the other 90%: shipping the next feature on something that already exists.
+This is for **building features on existing products** . It is not for vibe coding 0-to-1 or greenfield ideas; most AI coding setups already excel there. Product Dev OS is for the 95% of us shipping the next feature on a foundation of existing product, company, and user context.
 
-Five structured workflows for creating product artifacts — briefs, PRDs, prototypes, GTM 1-pagers, and external docs — with AI-simulated stakeholder reviews built in.
+Steps:
+1. Load 3 pieces of context: company context (goals, north star metrics, design metrics), feature context (raw customer asks, data, competitive intel), and your PM POV ()
+
+
 
 Works with [Cursor](https://cursor.com/) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
@@ -16,9 +19,9 @@ By [Mike Lyngaas](https://mikelyngaas.github.io/index.html)
 
 You don't need to read the artifact hub or workflows — the AI uses those to route and run. You do this:
 
-1. **First time:** Fill in `System/company-context.md` with your vision, goals, and principles (once; reuse for every feature).
-2. **Start a feature:** In Cursor, type **`@new-feature`** in chat (or say "I want to start a new feature"). Give a short name when asked (e.g. `smart-notifications`). The AI creates `Features/[name]/`, copies the PM POV and feature-context templates there, and walks you through filling them in.
-3. **Answer the PM POV and feature-context questions** (one at a time; your conviction level calibrates whether the AI sharpens or challenges your framing).
+1. **Start a feature:** In Cursor, type **`@new-feature`** in chat (or in Claude Code, say "I want to start a new feature"). The AI will ask you to fill in `System/company-context.md` first if it's not set (vision, goals, principles — once per org, reuse for every feature). When you're done, say so and continue.
+2. **Give a short name** when asked (e.g. `smart-notifications`). The AI creates `Features/[name]/`, copies the PM POV and feature-context templates there, and walks you through filling them in.
+3. **Answer the PM POV and feature-context questions** one at a time; your conviction level calibrates whether the AI sharpens or challenges your framing.
 4. **Pick an artifact** (Product Brief is the default). The AI runs the workflow: draft → persona review (P0/P1/P2) → revise. You react and decide when to move on.
 5. **Iterate.** From the brief you can go to a PRD, or spin off a prototype or GTM 1-pager right away — no need to finish the PRD first.
 
@@ -28,18 +31,18 @@ For more context — how it works, demo, project structure — read on below.
 
 ---
 
-### Without pmOS
+### Without Product Dev OS
 
-- You ask the AI to write a PRD and get a generic template filled with vague language — the AI effectively does the product thinking for you
+- You ask the AI to write a product doc or prototype, and get a generic template filled with vague language.
 - No structured review — the AI agrees with everything you wrote
 - Each artifact starts from scratch with no shared context
 - You spend more time wrestling the output into shape than thinking about the product
 - The AI doesn't know your company strategy, your conviction level, or what you're worried about
 
-### With pmOS
+### With Product Dev OS
 
-- Core product thinking stays with you: you fill in the PM POV (your point of view, in your words — no shortcuts) and raw evidence; the AI synthesizes and drafts from that, it doesn't replace your judgment
-- The AI synthesizes your inputs against company strategy before writing anything
+- Core product thinking stays with you: you fill in the PM POV (your point of view, in your words -- no shortcuts!) and raw evidence; the AI synthesizes and drafts from that, it doesn't replace your judgment
+- The AI gut checks your inputs against company goals and context before writing anything
 - Structured, phased workflows with AI-simulated stakeholder reviews (CEO/Founder, Tech Lead, Design Lead, QA, GTM, and more)
 - Every piece of feedback is tagged P0/P1/P2 so you know what to address
 - When your conviction is low, the AI challenges your framing. When it's high, the AI sharpens it.
@@ -61,59 +64,56 @@ Artifacts are modular. You can create a prototype as soon as the brief is done; 
 
 ---
 
-## Demo: one feature, brief to PRD
-
-```
-You:   I want to start a new feature. (or @new-feature)
-pmOS:  What should we call it? Short name, e.g. smart-notifications or sequence-templates.
-You:   template-gallery
-pmOS:  Set up Features/template-gallery/. Let's fill in the PM POV. What's the problem in your own words?
-You:   Users build outbound sequences from scratch every time — 30+ min, same patterns. New reps don't know what a good sequence looks like.
-pmOS:  What's your hypothesis on the right solution direction?
-You:   Curated templates: gallery of proven sequences they can browse, preview, deploy. V1 read-only; V2 adds AI customization.
-...
-You:   Conviction around 80-85%.
-pmOS:  High conviction — I'll sharpen. [Synthesis:] Problem = slow, inconsistent quality. Signal = top accounts asked. Tension = V1 read-only vs support tickets wanting customization. Strategic fit = Q1 "Make Unify Self-Serve." Match?
-You:   Yes. Staying firm on read-only for V1.
-pmOS:  Noted. [Drafts sections 1-3.] Ready for CEO/Founder review?
-You:   Go.
-pmOS:  **CEO/Founder:** P0 — "Why now" is weak; quantify churn/onboarding cost. P1 — Size the investment (2 weeks vs quarter?). P2 — Templates as wedge into marketing ops?
-You:   Addressing P0, then moving on. Now do the full PRD.
-pmOS:  Brief exists — abbreviating Phase 1, starting with detailed requirements. Ready for Phase 2?
-```
-
----
-
 ## How it works
 
 ```
                     ┌─────────────────────────┐
-                    │       PM POV            │
-                    │   (your point of view)  │
+                    │       Inputs            │
+                    │  PM POV · Feature Ctx   │
+                    │  Company Context       │
                     └────────────┬────────────┘
-                                │
-              ┌─────────────────┼─────────────────┐
-              │                                   │
-              ▼                                   ▼
-┌─────────────────────────┐         ┌─────────────────────────┐
-│    Feature Context      │         │    Company Context      │
-│   (raw evidence)        │         │  (strategy & goals)     │
-└─────────────┬───────────┘         └───────────┬─────────────┘
-              │                                 │
-              └────────────┬────────────────────┘
-                           │
-                           ▼
-                  ┌─────────────────┐
-                  │  Artifact Hub   │
-                  │  (routes to     │
-                  │   the right     │
-                  │   workflow)     │
-                  └────────┬────────┘
-                           │
-        ┌──────────┬───────┼───────┬──────────┐
-        ▼          ▼       ▼       ▼          ▼
-     Brief       PRD   Prototype  GTM      Docs
-                                1-Pager
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Confident in solution?  │
+                    └────────────┬────────────┘
+              ┌──────────────────┼──────────────────┐
+         High ▼             Mid ▼               Low ▼
+    ┌─────────────┐   ┌─────────────────┐   ┌─────────────┐
+    │  Sharpen    │   │ Sharpen +        │   │  Challenge  │
+    │             │   │ challenge        │   │             │
+    └──────┬──────┘   └────────┬────────┘   └──────┬──────┘
+           └──────────────────┼──────────────────┘
+                              │
+                              ▼
+                    ┌─────────────────────────┐
+                    │ Artifacts (draft w/ AI)  │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Personas give feedback  │
+                    │  CEO · Tech · Design ·   │
+                    │  QA · GTM · Support ·    │
+                    │  Legal                  │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Draft → Review → Iterate│
+                    │  (P0/P1/P2 → Revise)     │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │    Final artifacts      │
+                    └────────────┬────────────┘
+                                 │
+              ┌────────┬─────────┼─────────┬────────┐
+              ▼        ▼         ▼         ▼        ▼
+         ┌─────────┐ ┌─────┐ ┌──────────┐ ┌─────────┐ ┌──────────┐
+         │ Brief   │ │ PRD │ │Prototype │ │GTM 1-Pg │ │  Docs    │
+         └─────────┘ └─────┘ └──────────┘ └─────────┘ └──────────┘
 ```
 
 **Three inputs feed every artifact:**
@@ -151,9 +151,32 @@ Personas are AI-simulated stakeholders used during the Review phase of each work
 
 ---
 
+## Demo: one feature, brief to PRD
+
+```
+You:   I want to start a new feature. (or @new-feature)
+Product Dev OS:  What should we call it? Short name, e.g. smart-notifications or sequence-templates.
+You:   template-gallery
+Product Dev OS:  Set up Features/template-gallery/. Let's fill in the PM POV. What's the problem in your own words?
+You:   Users build outbound sequences from scratch every time — 30+ min, same patterns. New reps don't know what a good sequence looks like.
+Product Dev OS:  What's your hypothesis on the right solution direction?
+You:   Curated templates: gallery of proven sequences they can browse, preview, deploy. V1 read-only; V2 adds AI customization.
+...
+You:   Conviction around 80-85%.
+Product Dev OS:  High conviction — I'll sharpen. [Synthesis:] Problem = slow, inconsistent quality. Signal = top accounts asked. Tension = V1 read-only vs support tickets wanting customization. Strategic fit = Q1 "Make Unify Self-Serve." Match?
+You:   Yes. Staying firm on read-only for V1.
+Product Dev OS:  Noted. [Drafts sections 1-3.] Ready for CEO/Founder review?
+You:   Go.
+Product Dev OS:  **CEO/Founder:** P0 — "Why now" is weak; quantify churn/onboarding cost. P1 — Size the investment (2 weeks vs quarter?). P2 — Templates as wedge into marketing ops?
+You:   Addressing P0, then moving on. Now do the full PRD.
+Product Dev OS:  Brief exists — abbreviating Phase 1, starting with detailed requirements. Ready for Phase 2?
+```
+
+---
+
 ## Working with the repo
 
-Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on pmOS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type **`@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
+Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on Product Dev OS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type **`@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
 
 ---
 
@@ -205,7 +228,7 @@ Features/                        ← Per-feature working docs and outputs (creat
 
 ## Who this is for
 
-PMs who use AI coding tools and want structured artifacts with real review — not generic output. Best fit: teams shipping features on an existing product (strategy, users, and context already in place), not greenfield 0-to-1 builds. The AI challenges when you're uncertain and sharpens when you're confident. Stakeholder perspectives without six meetings. Lives in your editor; grounded in your company context.
+PMs and Product builders who use AI coding tools and want structured artifacts with real review — not generic output. Best fit: teams shipping features on an existing product (strategy, users, and context already in place), not greenfield 0-to-1 builds. The AI challenges when you're uncertain and sharpens when you're confident. Stakeholder perspectives without six meetings. Lives in your editor; grounded in your company context.
 
 ---
 

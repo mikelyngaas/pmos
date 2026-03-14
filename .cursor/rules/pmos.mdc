@@ -1,9 +1,9 @@
 ---
-description: pmOS — routes the agent to the right workflow for PRDs, product briefs, prototypes, GTM 1-pagers, and external docs
+description: Product Dev OS — routes the agent to the right workflow for PRDs, product briefs, prototypes, GTM 1-pagers, and external docs
 alwaysApply: true
 ---
 
-# pmOS — Product Artifact System
+# Product Dev OS — Product Artifact System
 
 When the user asks to create, draft, or work on any product artifact — PRD, product brief, prototype, GTM 1-pager, or external docs — follow the system in `System/`.
 

@@ -113,7 +113,7 @@ Update the HTML file based on feedback. Common iterations:
 - Adding interactions that were overlooked
 - Refining placeholder content for realism
 
-Before calling the prototype done, verify it meets the **Interactive Prototype** quality bar in `System/quality-bars-draft.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. The user confirms when the prototype is ready.
+Before calling the prototype done, verify it meets the **Interactive Prototype** quality bar in `System/quality-bars.md`. If it doesn't, list the gaps and ask the PM: address them or explicitly accept and proceed? The PM can override. The user confirms when the prototype is ready.
 
 ---
 
