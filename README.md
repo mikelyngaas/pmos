@@ -2,12 +2,29 @@
 
 **A modular artifact-building system that turns AI coding assistants into top 1% product development partners.**
 
-This is for **building features on existing products** . It is not for vibe coding 0-to-1 or greenfield ideas; most AI coding setups already excel there. Product Dev OS is for the 95% of us shipping the next feature on a foundation of existing product, company, and user context.
+This is for **building features on existing products**, not for vibe coding 0-to-1 or greenfield ideas; most AI coding tools already excel there. Product Dev OS is for the 95% of us shipping features on a foundation of existing product, company, and user context. It pressure tests your core product thinking, channels opinionated stakeholders, and builds high quality breifs and prototypes insanely fast
 
-Steps:
-1. Load 3 pieces of context: company context (goals, north star metrics, design metrics), feature context (raw customer asks, data, competitive intel), and your PM POV ()
+There are 4 phases:
 
+**[1] Load in your context**
 
+- **PM POV:** the AI will be ask you 5 targeted questions about the problem, it's importance, your solution hypothesis, and your confidence in it —> the AI will challenge vs. strengthen your ideas based on your confidence.
+- **Company context**: goals, north star metrics, design principles. Set once and it'll inform all features built.
+- **Feature context:** raw customer asks, Gong transcripts, or competitive intel.
+
+**[2] Artifact(s) draft**
+
+The AI will take a pass at a draft Product Brief, PRD, and/or Prototype, and prompt you to fill in the gaps. These are based on templates that you can make your own.
+
+**[3] Stakeholder review & iteration**
+
+Purpose-built personas review output and provide feedback, tagging it with P0/P1/P2 feedback. These channel your CEO/Founder, Tech Lead, Design Lead, QA, GTM, Support, and Legal & Data partners to make sure you're covering all your bases.
+
+**[4] Final artifacts produced**
+
+After specific quality thresholds are met on artifacts, the AI will document key decisions and changes made during the iteration process and give you a polished artifact(s) you can bring to your human team.
+
+---
 
 Works with [Cursor](https://cursor.com/) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
@@ -15,17 +32,17 @@ By [Mike Lyngaas](https://mikelyngaas.github.io/index.html)
 
 ---
 
-## Start here (for PMs)
+## Start here
 
-You don't need to read the artifact hub or workflows — the AI uses those to route and run. You do this:
 
-1. **Start a feature:** In Cursor, type **`@new-feature`** in chat (or in Claude Code, say "I want to start a new feature"). The AI will ask you to fill in `System/company-context.md` first if it's not set (vision, goals, principles — once per org, reuse for every feature). When you're done, say so and continue.
+0. **Get the files:** Clone or download this repo (e.g. `git clone https://github.com/mikelyngaas/pmos.git`), then open the folder in Cursor or your Claude Code project.
+1. **Start a feature:** In Cursor, type `**@new-feature`** in chat (or in Claude Code, say "I want to start a new feature"). The AI will ask you to fill in `System/company-context.md` first if it's not set (vision, goals, principles — once per org, reuse for every feature). When you're done, say so and continue.
 2. **Give a short name** when asked (e.g. `smart-notifications`). The AI creates `Features/[name]/`, copies the PM POV and feature-context templates there, and walks you through filling them in.
 3. **Answer the PM POV and feature-context questions** one at a time; your conviction level calibrates whether the AI sharpens or challenges your framing.
 4. **Pick an artifact** (Product Brief is the default). The AI runs the workflow: draft → persona review (P0/P1/P2) → revise. You react and decide when to move on.
 5. **Iterate.** From the brief you can go to a PRD, or spin off a prototype or GTM 1-pager right away — no need to finish the PRD first.
 
-**Cursor:** Clone the repo, open the folder in Cursor, then do the steps above. **Claude Code:** Same steps; Claude Code reads `CLAUDE.md` automatically.
+
 
 For more context — how it works, demo, project structure — read on below.
 
@@ -52,13 +69,15 @@ For more context — how it works, demo, project structure — read on below.
 
 ## Artifacts
 
-| Artifact | What it does | When to use it |
-|----------|-------------|----------------|
-| **Product Brief** | Aligns the team on problem, goals, and solution direction | Early stage — before detailed requirements |
-| **Full PRD** | Detailed requirements and edge cases ready for engineering | Pre-build — after alignment |
+
+| Artifact                  | What it does                                                  | When to use it                                                                      |
+| ------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Product Brief**         | Aligns the team on problem, goals, and solution direction     | Early stage — before detailed requirements                                          |
+| **Full PRD**              | Detailed requirements and edge cases ready for engineering    | Pre-build — after alignment                                                         |
 | **Interactive Prototype** | Clickable, self-contained HTML visualization of key workflows | From a brief (concept-level) or PRD (detailed) — when stakeholders need to *see* it |
-| **GTM 1-Pager** | Sales/CS/marketing primer for a feature | Pre-launch — when GTM teams need enablement |
-| **External Docs** | Customer-facing documentation draft | Near or post-launch |
+| **GTM 1-Pager**           | Sales/CS/marketing primer for a feature                       | Pre-launch — when GTM teams need enablement                                         |
+| **External Docs**         | Customer-facing documentation draft                           | Near or post-launch                                                                 |
+
 
 Artifacts are modular. You can create a prototype as soon as the brief is done; you don't need to finish the PRD first. Not every feature needs every artifact. Produce what the feature and its stage require.
 
@@ -118,17 +137,19 @@ Artifacts are modular. You can create a prototype as soon as the brief is done; 
 
 **Three inputs feed every artifact:**
 
-1. **PM POV** (point of view) — your read on the problem, why it matters, your hypothesis, your worries, your conviction level. This is the primary framing — the AI builds on your judgment, not around it.
-2. **Feature Context** — raw evidence. Customer quotes, support tickets, sales feedback, competitive intel. Messy is fine.
-3. **Company Context** — your product vision, north star metrics, quarterly goals, and design principles. Set once, reuse everywhere.
+1. **PM POV** (point of view): your read on the problem, why it matters, your hypothesis, your worries, your conviction level. This is the primary framing — the AI builds on your judgment, not around it.
+2. **Feature Context**: raw evidence. Customer quotes, support tickets, sales feedback, competitive intel. Messy is fine.
+3. **Company Context**: your product vision, north star metrics, quarterly goals, and design principles. Set once, reuse everywhere.
 
 **Conviction-based AI behavior:**
 
-| Your conviction | AI mode |
-|-----------------|---------|
-| High (80–100%) | **Sharpen.** Strengthen your framing with evidence. Push for precision. |
+
+| Your conviction   | AI mode                                                                                                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| High (80–100%)    | **Sharpen.** Strengthen your framing with evidence. Push for precision.                                                                                                                          |
 | Moderate (60–79%) | **Sharpen and challenge.** Build out the framing but also surface 1–2 pressure-test questions. If the PM added conviction notes (e.g. high on problem, low on solution), use those to calibrate. |
-| Low (< 60%) | **Challenge.** Pressure-test the hypothesis. Surface alternatives. Ask harder questions. |
+| Low (< 60%)       | **Challenge.** Pressure-test the hypothesis. Surface alternatives. Ask harder questions.                                                                                                         |
+
 
 **Phased workflows with persona reviews:** Each artifact is Draft → Review → Revise. The AI simulates the right stakeholders (CEO/Founder, Tech Lead, Design Lead, QA, GTM, Support, Legal, Data Science) and tags feedback P0/P1/P2. Not every artifact uses every persona. Personas live in `System/Personas/` — add, remove, or edit to match your team.
 
@@ -138,16 +159,18 @@ Artifacts are modular. You can create a prototype as soon as the brief is done; 
 
 Personas are AI-simulated stakeholders used during the Review phase of each workflow. They give you structured feedback from different roles so you can pressure-test artifacts without scheduling meetings. Each persona focuses on a different slice of the artifact (strategy, engineering, UX, compliance, etc.); feedback is tagged P0/P1/P2 so you know what to fix first. Add, remove, or edit personas in `System/Personas/` to match your team.
 
-| Persona | Description |
-|----------|--------------|
-| **CEO/Founder** | Strategic lens: right investment at the right time, ROI, opportunity cost, scope prioritization. |
-| **Tech Lead** | Engineering reality check: feasibility, architecture, dependencies, risk, build-vs-buy. |
-| **Design Lead** | User's advocate: intuitive workflows, cognitive load, edge-case UX, simplification. |
-| **QA Lead** | Failure-case thinker: acceptance criteria, edge cases, testability, release readiness. |
-| **GTM Lead** | Market-facing strategist: positioning, adoption, packaging/pricing, launch and enablement. |
-| **Support Lead** | Customer confusion anticipator: error messaging, documentation, post-launch monitoring. |
-| **Legal Lead** | Risk and compliance guardrail: regulatory, contractual, data privacy, disclosures. |
-| **Data Science Lead** | Measurement reality check: instrumentable goals, event design, metrics, guardrails. |
+
+| Persona               | Description                                                                                      |
+| --------------------- | ------------------------------------------------------------------------------------------------ |
+| **CEO/Founder**       | Strategic lens: right investment at the right time, ROI, opportunity cost, scope prioritization. |
+| **Tech Lead**         | Engineering reality check: feasibility, architecture, dependencies, risk, build-vs-buy.          |
+| **Design Lead**       | User's advocate: intuitive workflows, cognitive load, edge-case UX, simplification.              |
+| **QA Lead**           | Failure-case thinker: acceptance criteria, edge cases, testability, release readiness.           |
+| **GTM Lead**          | Market-facing strategist: positioning, adoption, packaging/pricing, launch and enablement.       |
+| **Support Lead**      | Customer confusion anticipator: error messaging, documentation, post-launch monitoring.          |
+| **Legal Lead**        | Risk and compliance guardrail: regulatory, contractual, data privacy, disclosures.               |
+| **Data Science Lead** | Measurement reality check: instrumentable goals, event design, metrics, guardrails.              |
+
 
 ---
 
@@ -176,7 +199,7 @@ Product Dev OS:  Brief exists — abbreviating Phase 1, starting with detailed r
 
 ## Working with the repo
 
-Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on Product Dev OS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type **`@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
+Your working copies are always in the feature folder (`Features/[name]/`); don't edit files in `System/Templates/`. The always-on Product Dev OS rule routes other artifact requests (e.g. "write the PRD") to the right workflow. **Cursor:** type `**@new-feature`** to kick off. **Claude Code:** same; `CLAUDE.md` loads automatically.
 
 ---
 
@@ -220,9 +243,9 @@ Features/                        ← Per-feature working docs and outputs (creat
 
 ## Customization
 
-- **Personas:** Edit `System/Personas/` and update assignments in `System/artifact-hub.md`. Default set is typical product team; add/remove (e.g. Compliance for fintech, drop GTM for consumer).
+- **Personas:** Edit `System/Personas/` and update assignments in `System/artifact-hub.md.` Default set is a typical B2B product team; add/remove (e.g. Compliance for fintech, drop GTM for consumer).
 - **Company context:** `System/company-context.md` — set once, reused for every artifact.
-- **Templates:** Edit `System/Templates/` to add sections or change output format; workflows pick them up.
+- **Templates:** Edit `System/Templates/` to add sections or change output format, and the workflow will pick them up.
 
 ---
 
