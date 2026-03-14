@@ -36,7 +36,7 @@ By [Mike Lyngaas](https://mikelyngaas.github.io/index.html)
 
 
 0. **Get the files:** Clone or download this repo (e.g. `git clone https://github.com/mikelyngaas/pmos.git`), then open the folder in Cursor or your Claude Code project.
-1. **Start a feature:** In Cursor, type `**@new-feature`** in chat (or in Claude Code, say "I want to start a new feature"). The AI will ask you to fill in `System/company-context.md` first if it's not set (vision, goals, principles — once per org, reuse for every feature). When you're done, say so and continue.
+1. **Start a feature:** In Cursor, type `**@new-feature`** in chat (or in Claude Code, say "I want to start a new feature"). 
 2. **Give a short name** when asked (e.g. `smart-notifications`). The AI creates `Features/[name]/`, copies the PM POV and feature-context templates there, and walks you through filling them in.
 3. **Answer the PM POV and feature-context questions** one at a time; your conviction level calibrates whether the AI sharpens or challenges your framing.
 4. **Pick an artifact** (Product Brief is the default). The AI runs the workflow: draft → persona review (P0/P1/P2) → revise. You react and decide when to move on.
